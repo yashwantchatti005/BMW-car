@@ -24,47 +24,52 @@
     <source src="m5bmw.mp4" type="video/mp4">
   </video>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="nav-left">
-      <a href="https://www.bmw.com/en/index.html">
-        <img src="BMW1.jpeg" alt="BMW Logo" class="logo">
-      </a>
-    </div>
+<!-- Navbar -->
+<header class="navbar">
+  <a href="https://www.bmw.com/en/index.html">
+    <img src="BMW1.jpeg" class="logo" alt="BMW Logo">
+  </a>
 
-    <ul class="nav-links">
-      <li><a href="#">Models</a></li>
-      <li><a href="#">Electric</a></li>
-      <li><a href="#">Configure</a></li>
-      <li><a href="#">Shop</a></li>
-    </ul>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="https://www.bmw.in/en/all-models.html">Models</a></li>
+    <li><a href="https://www.bmw.in/en/topics/Fascination-BMW/electromobility2020-new/electric-cars.html">Electric</a></li>
+    <li><a href="https://www.bmw.in/en/configurator.html">Configure</a></li>
+    <li><a href="https://www.bmw.in/en/shop/ls/cp/connected-drive">Shop</a></li>
+  </ul>
 
-    <div class="nav-icons">
+  <div class="nav-icons">
+    <a href="https://www.bmw.in/en/shop/ls/login.html">
       <i class="fa-regular fa-user"></i>
+    </a>
+    <a href="https://www.bmw.in/en/shop/ls/cart/digital-services">
       <i class="fa-solid fa-cart-shopping"></i>
-      <i class="fa-solid fa-bars menu-icon"></i>
-    </div>
-  </header>
+    </a>
+    <i class="fa-solid fa-bars menu-btn" onclick="toggleMenu()"></i>
+  </div>
+</header>
 
-  <!-- Hero -->
+
+  <!-- Hero Section -->
   <section class="hero">
     <h3>SHEER DRIVING PLEASURE</h3>
     <h1>THE <br> 5 SERIES</h1>
+
     <a href="https://www.bmw.in/en/all-models/5-series/sedan/bmw-5-series-sedan-g68.html">
       <button class="primary-btn">DISCOVER NOW</button>
     </a>
   </section>
 
-  <!-- Tools -->
+  <!-- Shopping Tools -->
   <section class="tools">
     <p class="small-title">SHOPPING TOOLS</p>
     <h2>FIND YOUR BMW</h2>
+
     <a href="https://shop.bmw.in/#/">
       <button class="secondary-btn">SEARCH NOW</button>
     </a>
   </section>
 
-  <!-- Electric -->
+  <!-- Electric Section -->
   <section class="electric">
     <img src="bmw12.jpeg" alt="BMW Electric">
 
@@ -73,11 +78,21 @@
         THE ALL ELECTRIC <br>
         <span>STAY AHEAD OF THE CURVE</span>
       </h2>
+
       <a href="https://www.bmw.in/en/all-models/7-series/sedan/2022/bmw-7-series-sedan-highlights.html">
         <button class="primary-btn">KNOW MORE</button>
       </a>
     </div>
   </section>
+
+
+  <script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+  }
+</script>
+
 
 </body>
 </html>
