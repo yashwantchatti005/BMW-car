@@ -20,7 +20,7 @@ body {
   z-index: -2;
 }
 
-/* Overlay for contrast */
+/* Dark overlay */
 body::before {
   content: "";
   position: fixed;
@@ -34,8 +34,8 @@ body::before {
   position: sticky;
   top: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 18px 50px;
   background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(15px);
@@ -47,9 +47,9 @@ body::before {
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 30px;
+  list-style: none;
 }
 
 .nav-links a {
@@ -78,8 +78,16 @@ body::before {
 .nav-icons {
   display: flex;
   gap: 18px;
+}
+
+.nav-icons a {
+  color: white;
   font-size: 16px;
-  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-icons a:hover {
+  color: #1c69d4;
 }
 
 /* Hero */
@@ -89,8 +97,8 @@ body::before {
 }
 
 .hero h3 {
-  letter-spacing: 4px;
   font-size: 14px;
+  letter-spacing: 4px;
   margin-bottom: 15px;
 }
 
@@ -103,9 +111,9 @@ body::before {
 /* Buttons */
 .primary-btn {
   padding: 14px 34px;
-  border: none;
   background: #1c69d4;
   color: white;
+  border: none;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
@@ -137,8 +145,8 @@ body::before {
 }
 
 .small-title {
-  letter-spacing: 3px;
   font-size: 12px;
+  letter-spacing: 3px;
   margin-bottom: 10px;
 }
 
@@ -194,9 +202,41 @@ body::before {
     width: 100%;
   }
 
-  .tools,
   .hero,
+  .tools,
   .electric {
     padding: 70px 20px;
+  }
+}
+
+/* Hamburger icon hidden on desktop */
+.menu-btn {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 30px 0;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 }
