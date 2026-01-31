@@ -22,7 +22,7 @@ Basic JavaScript
 
 GitHub Pages for hosting
 
-## 🗂️ Project Structure
+🗂️ Project Structure
 BMW-car/
 ├── index.html
 ├── styles.css
